@@ -22,6 +22,7 @@ The benchmark combines:
 - Soft probabilistic segmentation materially improves discrimination over the plain GLM baseline.
 - Burt-based latent representations trade some discrimination for improved calibration and more moderate aggregate tail behaviour.
 - The Burt-augmented representation adds almost no lift beyond the Burt-only representation, suggesting strong informational redundancy.
+- Coverage-layer analysis shows that the preferred representation can change under deductible versus per-claim-limit structures.
 - Heavy-tailed severity distributions create numerical instability within FFT aggregation frameworks despite superior local fit.
 
 ## Technologies

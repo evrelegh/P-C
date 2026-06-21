@@ -46,6 +46,7 @@ model*, and which are properties of the *representation geometry*?
 - The aggregate capital findings — lower ground-up tail and the coverage-layer reversal —
   are **reproduced almost unchanged**, suggesting they are properties of the segmentation
   geometry rather than the pricing model.
+- Bottom-up and a directly-fitted collective model converge on this benchmark (TVaR 99% within 0.15%); the residual is a segmentation-mixture effect, and the larger claims-development divergence is located in production portfolios rather than the method.
 - One caveat: top-decile *calibration* of the Burt representation is partition-sensitive
   and should be read as a distribution, not a point estimate.
 

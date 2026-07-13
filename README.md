@@ -10,6 +10,7 @@ segmentation, Burt latent representations, and FFT-based analytic aggregate risk
 The work is in two stages: a linear (GLM) study, and a non-linear extension that tests
 which of its findings survive a gradient-boosted learner.
 
+![Computational framework](Images/CarInsuranceChart1.jpg)
 ---
 
 ## Stage 1 — The GLM study

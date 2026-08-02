@@ -1,5 +1,7 @@
 # Computational Actuarial Representation Benchmark
 
+![Computational framework](Images/framework.svg)
+
 How does *representation geometry* — the way categorical rating factors are encoded —
 propagate through the actuarial pipeline? Not only into pricing discrimination, but into
 latent segmentation, aggregate portfolio behaviour, capital metrics, and reinsurance
@@ -10,7 +12,6 @@ segmentation, Burt latent representations, and FFT-based analytic aggregate risk
 The work is in two stages: a linear (GLM) study, and a non-linear extension that tests
 which of its findings survive a gradient-boosted learner.
 
-![Computational framework](Images/CarInsuranceChart1.jpg)
 ---
 
 ## Stage 1 — The GLM study
@@ -52,6 +53,25 @@ model*, and which are properties of the *representation geometry*?
   and should be read as a distribution, not a point estimate.
 
 → `gradient_boosting_extension.pdf`
+
+---
+
+## Why this study is built the way it is
+
+Every headline number here is cross-checked rather than asserted. Analytic FFT
+compound-Poisson aggregation replaces Monte-Carlo simulation (exact under the model, no
+sampling noise); a bottom-up segmented model and a directly-fitted collective model are
+required to converge (TVaR 99% within 0.15%); and every Stage-1 finding is re-tested
+out-of-fold against a gradient-boosted learner, to separate what is a property of the
+*linear model* from what is a property of the *representation geometry*. The aim is not a
+single number but a result that survives independent methods and a change of model class —
+certified, not asserted.
+
+The same validation-first discipline runs through the companion
+[LongevityRisk](https://github.com/evrelegh/LongevityRisk) (pension longevity),
+[ClinicalSupplyRisk](https://github.com/evrelegh/ClinicalSupplyRisk) (clinical-trial drug
+demand) and [ResourceAdequacy](https://github.com/evrelegh/ResourceAdequacy) (electricity
+resource adequacy) studies.
 
 ---
 
